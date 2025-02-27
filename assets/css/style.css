@@ -289,6 +289,10 @@ nav ul li a:hover::after{
     flex-direction: column;
     justify-content: space-between;
 }
+.testimonials-card:hover {
+    transform: translateY(-10px);
+    border: 2px solid var(--primary-color-dark);
+}
 
 /* --- Footer --- */
 footer {
