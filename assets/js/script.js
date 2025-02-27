@@ -95,12 +95,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     fetchWeather("Söderhamn");
-
-    searchBtn.addEventListener("click", function() {
-        const city = cityInput.value.trim();
-        if (city !== "") {
-            fetchWeather(city);
-        }
-    });
 });
 
