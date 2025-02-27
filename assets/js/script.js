@@ -13,5 +13,28 @@ document.addEventListener("DOMContentLoaded", function () {
             navList.classList.remove("menu-active");
         });
     });
+
+    let swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        grabCursor: true,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true
+        },
+        breakpoints: {
+            360: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1440: { slidesPerView: 5 },
+
+        }
+    });
 });
 
