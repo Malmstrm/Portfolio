@@ -645,10 +645,6 @@ footer .social a:hover {
     .skills-content {
         grid-template-columns: repeat(2, 2fr);
     }
-    /* Footer */
-    footer .weather-api {
-        display: none;
-    }
 }
 @media (min-width: 360px) and (max-width: 860px){
 
