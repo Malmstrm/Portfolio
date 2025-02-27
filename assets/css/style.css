@@ -2,7 +2,6 @@
 
 :root {
     --primary-color: #0b9fe4;
-    --primary-color2: #49c5ff;
     --primary-color-dark: #0d90cc;
     --primary-background: white;
     --secondary-color: #ca8a04;
@@ -20,7 +19,23 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: var(--font);
+    background-color: var(--extra-light);
+}
 
+section{
+    width: 90%;
+    margin: 2rem auto;
+    background-color: var(--extra-light);
+    padding: 1rem;
+}
+a{
+    text-decoration: none;
+    }
+ul{
+    list-style: none;
+}
 /* --- Nav-Logo --- */
 .nav-content .logo a{
     font-size: 1.5rem;
