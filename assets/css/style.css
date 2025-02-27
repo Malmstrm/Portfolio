@@ -446,23 +446,23 @@ nav ul li a:hover::after {
     font-size: 1.5rem;
     font-weight: bold;
 }
-/* Modal Container - döljs som standard */
+/* --- ContactForm Modal ---*/
 .modal {
-    display: none; /* Gömmer modalen initialt */
+    display: none;
     position: fixed;
-    z-index: 100; /* Högt värde så att den ligger över övrigt innehåll */
+    z-index: 100; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /* Möjliggör scrollning om innehållet är stort */
-    background-color: rgba(0, 0, 0, 0.5); /* Halvtransparent bakgrund */
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
 }
   
   /* Modal Innehåll */
 .modal-content {
     background-color: #fefefe;
-    margin: 10% auto; /* Centrera modalen med lite marginal från toppen */
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
@@ -471,13 +471,18 @@ nav ul li a:hover::after {
     position: relative;
     text-align: center;
 }
-.modal-content h2{
-    color: var(--primary-color);
-    text-align: center;
+.contact-info{
     margin-bottom: 20px;
 }
-
-/* Stäng-knapp */
+.contact-info p {
+    text-align: start;
+    line-height: 2rem;
+    margin: auto;
+}
+.modal-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
 .close-button {
     color: #aaa;
     position: absolute;
@@ -491,8 +496,7 @@ nav ul li a:hover::after {
 .close-button:focus {
     color: #000;
 }
-
-.modal-content button{
+.modal-content button {
     justify-content: center;
     font-size: 1rem;
     font-weight: 600;
@@ -505,8 +509,6 @@ nav ul li a:hover::after {
     background-color: var(--primary-color);
     color: white;
 }
-
-/* Enkel styling för formgrupper */
 .input-group {
     margin-bottom: 1rem;
 }
