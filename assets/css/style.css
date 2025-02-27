@@ -507,6 +507,9 @@ footer .social a:hover {
 
 @media (min-width: 769px) and (max-width: 1024px) {
     /* About */
+    .image2 img {
+        width: 80% ;
+    }
     .testimonial-container {
         grid-template-columns: repeat(2, 2fr);
     }
@@ -567,7 +570,7 @@ footer .social a:hover {
         grid-template-columns: repeat(1, 1fr);
     }
     .image2 img {
-        width: 200px;
+        width: 300px;
     }
     /* Skills */
     .skills-content {
