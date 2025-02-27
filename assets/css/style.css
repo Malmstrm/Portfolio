@@ -32,7 +32,7 @@ section{
 }
 a{
     text-decoration: none;
-    }
+}
 ul{
     list-style: none;
 }
@@ -75,7 +75,6 @@ nav{
     z-index: 99;
     box-shadow: var(--shadow);
 }
-
 .nav-content{
     max-width: var(--max-width);
     margin: auto;
@@ -84,14 +83,12 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
-
 nav ul{
     display: flex;
     gap: 1rem;
     transition: var(--transition);
     list-style: none;
 }
-
 nav ul li a{
     position: relative;
     padding: 0.5rem;
@@ -123,8 +120,9 @@ nav ul li a:hover::before,
 nav ul li a:hover::after{
     transform: scaleX(1);
 }
-/* --- Footer --- */
 
+
+/* --- Footer --- */
 footer {
     background-color: var(--primary-background);
     bottom: 0;
@@ -187,6 +185,8 @@ footer .social a:hover{
 
 }
 @media (min-width: 360px) and (max-width: 860px){
+
+    /* NAV */
     nav .menu-mobile{
         display: block;
     }
@@ -204,5 +204,16 @@ footer .social a:hover{
     .nav-content ul li a {
         font-size: 1.5rem;
         left: 4rem;
+    }
+    /* Footer */
+    footer .weather-api{
+        display: none;
+    }
+    footer .social{
+        padding: 0;
+    }
+
+    footer .social a{
+        margin: 0;
     }
 }
