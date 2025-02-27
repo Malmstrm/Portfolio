@@ -293,7 +293,49 @@ nav ul li a:hover::after{
     transform: translateY(-10px);
     border: 2px solid var(--primary-color-dark);
 }
-
+/* --- Skills-Section --- */
+.skills-container{
+    min-height: 50vh;
+    max-width: var(--max-width);
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    padding: 5rem 2rem;
+}
+.skills-content{
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    justify-content: center;
+    gap: 1rem;
+}
+.skill-card {
+    background: var(--primary-background);
+    height: 195px; /* Fast höjd för jämn storlek */
+    width: 325px;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out;
+}
+.skill-card:hover{
+    transform: translateY(-10px);
+    border: 2px solid var(--primary-color-dark);
+}
+.skill-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+.skill-card h3{
+    font-size: 1.5rem;
+    color:  var(--text-dark);
+}
+.skill-card p {
+    color: var(--text-light);
+}
 /* --- Footer --- */
 footer {
     background-color: var(--primary-background);
@@ -358,6 +400,9 @@ footer .social a:hover {
     .testimonial-container {
         grid-template-columns: repeat(2, 2fr);
     }
+    .skills-content {
+        grid-template-columns: repeat(2, 2fr);
+    }
 }
 @media (min-width: 360px) and (max-width: 860px){
 
@@ -411,9 +456,12 @@ footer .social a:hover {
     .testimonial-container {
         grid-template-columns: repeat(1, 1fr);
     }
-
     .image2 img{
         width: 200px;
+    }
+    /* Skills */
+    .skills-content{
+        grid-template-columns: repeat(1,1fr);
     }
     /* Footer */
     footer .weather-api{
