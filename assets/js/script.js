@@ -38,20 +38,56 @@ document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("contactModal");
     const openModalBtn = document.getElementById("openContactForm");
     const closeBtn = document.querySelector(".close-button");
+    const contactForm = document.getElementById("contactForm");
 
-    openModalBtn.addEventListener("click", function (event) {
-        event.preventDefault(); // Förhindrar standardbeteendet (navigering)
+    if(openModalBtn) {
+        openModalBtn.addEventListener("click", function(event) {
+        event.preventDefault();
         modal.style.display = "block";
-    });
+        });
+    }
 
-    closeBtn.addEventListener("click", function () {
-    modal.style.display = "none";
-    });
+    if(closeBtn) {
+        closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+        });
+    }
 
     window.addEventListener("click", function (event) {
-    if (event.target === modal) {
-    modal.style.display = "none";
-    }
+        if (event.target === modal) {
+        modal.style.display = "none";
+        }
+    });
+
+    contactForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+        };
+
+        fetch("https://formspree.io/f/xqaerzva", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+        })
+        .then(response => {
+        if (response.ok) {
+            alert("Tack för ditt meddelande!");
+            contactForm.reset();
+            modal.style.display = "none";
+        } else {
+            alert("Något gick fel, försök igen senare.");
+        }
+        })
+        .catch(error => {
+        console.error("Fel vid sändning av meddelande:", error);
+        alert("Något gick fel, försök igen senare.");
+        });
     });
 
     const cityInput = document.getElementById("city-input");
