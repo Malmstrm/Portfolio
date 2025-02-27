@@ -178,7 +178,7 @@ nav ul li a:hover::after {
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 2px;
-    padding: 1rem 2rem;
+    padding: 1rem 4rem;
     border: 2px solid var(--primary-color);
     border-radius: 8px;
     transition: var(--transition);
@@ -192,30 +192,11 @@ nav ul li a:hover::after {
     color: var(--text-dark);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
-.home-bts button {
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    padding: 1rem 2rem;
-    border: 2px solid var(--primary-color);
-    border-radius: 8px;
-    transition: var(--transition);
-    cursor: pointer;
-    background-color: var(--primary-color);
-    color: white;
-}
-.home-bts button:hover {
-    transform: scale(1.2)translateY(-10xp);
-    background-color: var(--primary-color-dark);
-    color: var(--text-dark);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-}
 .home-content .social {
     margin-top: 20px;
     display: flex;
     justify-content: center;
+    gap: 1rem;
 }
 .home-content .social a {
     font-size: 1.5rem;

@@ -39,17 +39,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const openModalBtn = document.getElementById("openContactForm");
     const closeBtn = document.querySelector(".close-button");
 
-    // Öppna modalen när knappen klickas
-    openModalBtn.addEventListener("click", function () {
-    modal.style.display = "block";
+    openModalBtn.addEventListener("click", function (event) {
+        event.preventDefault(); // Förhindrar standardbeteendet (navigering)
+        modal.style.display = "block";
     });
 
-    // Stäng modalen när "X" klickas
     closeBtn.addEventListener("click", function () {
     modal.style.display = "none";
     });
 
-    // Stäng modalen om användaren klickar utanför modalinnehållet
     window.addEventListener("click", function (event) {
     if (event.target === modal) {
     modal.style.display = "none";
