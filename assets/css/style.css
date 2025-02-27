@@ -130,5 +130,22 @@ nav ul li a:hover::after{
 
 }
 @media (min-width: 360px) and (max-width: 860px){
-
+    nav .menu-mobile{
+        display: block;
+    }
+    .nav-content ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 80px);
+        left: -100%;
+        top: 82px;
+        background-color: var(--extra-light);
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+    .nav-content ul li a {
+        font-size: 1.5rem;
+        left: 4rem;
+    }
 }

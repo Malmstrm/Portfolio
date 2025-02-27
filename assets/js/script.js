@@ -13,7 +13,5 @@ document.addEventListener("DOMContentLoaded", function () {
             navList.classList.remove("menu-active");
         });
     });
-
-
 });
 
