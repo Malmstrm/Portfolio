@@ -448,7 +448,12 @@ nav ul li a:hover::after {
 }
 /* --- Weather API --- */
 .weather-api {
-    gap: 2rem;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: var(--text-dark);
 }
 .weather-api button {
     justify-content: center;
@@ -480,6 +485,9 @@ nav ul li a:hover::after {
 .weather-api textarea {
     font-family: var(--font);
 }
+#weather-icon {
+    width: 20%;
+}
 /* --- Footer --- */
 footer {
     background-color: var(--primary-background);
@@ -488,11 +496,14 @@ footer {
     padding: 1rem 1rem;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
     align-items: center;
     gap: 4rem;
     box-shadow: var(--shadow);
+}
+footer .logo{
+    padding: 1rem;
 }
 footer .logo a {
     color: var(--text-dark);
@@ -549,6 +560,10 @@ footer .social a:hover {
     }
     .skills-content {
         grid-template-columns: repeat(2, 2fr);
+    }
+    /* Footer */
+    footer .weather-api {
+        display: none;
     }
 }
 @media (min-width: 360px) and (max-width: 860px){
@@ -611,6 +626,9 @@ footer .social a:hover {
         grid-template-columns: repeat(1,1fr);
     }
     /* Footer */
+    footer .logo{
+        padding: 0;
+    }
     footer .weather-api {
         display: none;
     }

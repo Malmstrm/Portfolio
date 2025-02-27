@@ -37,40 +37,49 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    const iconCode = data.weather[0].icon; // Hämtar ikon-koden från API-svaret
-    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
     const cityInput = document.getElementById("city-input");
     const searchBtn = document.getElementById("search-btn");
     const cityLabel = document.getElementById("city-label");
     const tempLabel = document.getElementById("temp-label");
+    const weatherIcon = document.getElementById("weather-icon");
 
-    const API_KEY ="42e7ac043437beb71b6c3a3a0a5f2655"; // Ersätt med din faktiska API-nyckel
+    const API_KEY = "42e7ac043437beb71b6c3a3a0a5f2655"; // Din giltiga API-nyckel
 
     function fetchWeather(city) {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
-        .then(response => response.json())
-        .then(data => {
-            if(data.cod === 200) {
-            // Uppdatera etiketterna med stadens namn och temperaturen (avrundad)
-            cityLabel.textContent = data.name;
-            tempLabel.textContent = `${Math.round(data.main.temp)}°C`;
-            } else {
-            cityLabel.textContent = "Stad ej hittad";
-            tempLabel.textContent = "";
-            }
-        })
-        .catch(error => {
-            console.error("Fel vid hämtning av väderdata:", error);
-            cityLabel.textContent = "Fel";
-            tempLabel.textContent = "";
-        });
+            .then(response => response.json())
+            .then(data => {
+                if (data.cod === 200) {
+                    // Hämta ikon-koden och bygg URL:en
+                    const iconCode = data.weather[0].icon;
+                    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+                    
+                    // Uppdatera DOM-element
+                    cityLabel.textContent = data.name;
+                    tempLabel.textContent = `${Math.round(data.main.temp)}°C`;
+                    weatherIcon.src = iconUrl;
+                    weatherIcon.alt = data.weather[0].description;
+                } else {
+                    cityLabel.textContent = "Stad ej hittad";
+                    tempLabel.textContent = "";
+                    weatherIcon.src = "";
+                }
+            })
+            .catch(error => {
+                console.error("Fel vid hämtning av väderdata:", error);
+                cityLabel.textContent = "Fel";
+                tempLabel.textContent = "";
+                weatherIcon.src = "";
+            });
     }
-    fetchWeather("Stockholm");
+
+
+    fetchWeather("Söderhamn");
 
     searchBtn.addEventListener("click", function() {
         const city = cityInput.value.trim();
-        if(city !== "") {
-        fetchWeather(city);
+        if (city !== "") {
+            fetchWeather(city);
         }
     });
 });
