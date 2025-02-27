@@ -259,6 +259,7 @@ nav ul li a:hover::after{
 }
 .about-content .descripton{
     margin: auto;
+    margin-bottom: 50px;
 }
 .about-content p{
     margin-bottom: 10px;
