@@ -39,55 +39,75 @@ document.addEventListener("DOMContentLoaded", function () {
     const openModalBtn = document.getElementById("openContactForm");
     const closeBtn = document.querySelector(".close-button");
     const contactForm = document.getElementById("contactForm");
-
-    if(openModalBtn) {
-        openModalBtn.addEventListener("click", function(event) {
+    const feedback = document.getElementById("feedback");
+  
+    // Öppna modalen
+    if (openModalBtn) {
+      openModalBtn.addEventListener("click", function(event) {
         event.preventDefault();
         modal.style.display = "block";
-        });
+      });
     }
-
-    if(closeBtn) {
-        closeBtn.addEventListener("click", function () {
+  
+    // Stäng modalen
+    if (closeBtn) {
+      closeBtn.addEventListener("click", function () {
         modal.style.display = "none";
-        });
+      });
     }
-
+  
+    // Stäng modalen om användaren klickar utanför
     window.addEventListener("click", function (event) {
-        if (event.target === modal) {
+      if (event.target === modal) {
         modal.style.display = "none";
-        }
+      }
     });
-
+  
+    // Hantera formulärsändning med JSON
     contactForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        const formData = {
+      event.preventDefault();
+  
+      const formData = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
         message: document.getElementById("message").value
-        };
-
-        fetch("https://formspree.io/f/xqaerzva", {
+      };
+  
+      fetch("https://formspree.io/f/xqaerzva", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
+          "Content-Type": "application/json"
         },
         body: JSON.stringify(formData)
-        })
-        .then(response => {
+      })
+      .then(response => {
         if (response.ok) {
-            alert("Tack för ditt meddelande!");
-            contactForm.reset();
+          // Visa feedback meddelande
+          feedback.style.display = "block";
+          feedback.textContent = "Tack för ditt meddelande!";
+          // Nollställ formuläret
+          contactForm.reset();
+          // Stäng modalen efter en kort stund
+          setTimeout(() => {
             modal.style.display = "none";
+            feedback.style.display = "none";
+          }, 3000);
         } else {
-            alert("Något gick fel, försök igen senare.");
+          feedback.style.display = "block";
+          feedback.style.borderColor = "#dc3545";
+          feedback.style.backgroundColor = "#f8d7da";
+          feedback.style.color = "#721c24";
+          feedback.textContent = "Något gick fel, försök igen senare.";
         }
-        })
-        .catch(error => {
+      })
+      .catch(error => {
         console.error("Fel vid sändning av meddelande:", error);
-        alert("Något gick fel, försök igen senare.");
-        });
+        feedback.style.display = "block";
+        feedback.style.borderColor = "#dc3545";
+        feedback.style.backgroundColor = "#f8d7da";
+        feedback.style.color = "#721c24";
+        feedback.textContent = "Något gick fel, försök igen senare.";
+      });
     });
 
     const cityInput = document.getElementById("city-input");

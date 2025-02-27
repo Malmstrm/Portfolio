@@ -524,6 +524,15 @@ nav ul li a:hover::after {
 .input-group textarea{
     height: 150px;
 }
+#feedback {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #28a745; /* grön kant för success */
+    background-color: #d4edda; /* ljusgrön bakgrund */
+    color: #155724; /* mörkgrön text */
+    border-radius: 5px;
+    text-align: center;
+  }
 /* --- Weather API --- */
 .weather-api {
     gap: 1rem;
