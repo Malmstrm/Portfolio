@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+    --primary-color: #0b9fe4;
+    --primary-color2: #49c5ff;
+    --primary-color-dark: #0d90cc;
+    --primary-background: white;
+    --secondary-color: #ca8a04;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --extra-light: #faf5ff;
+    --max-width: 1200px;
+    --min-width: 360px;
+    --shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    --transition: 0.3s;
+    --font: 'Poppins', sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* --- Nav-Logo --- */
+.nav-content .logo a{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: var(--transition);
+}
+.nav-content .logo span{
+    color: var(--primary-color);
+}
+.nav-content .logo a:hover{
+    color: var(--primary-color-dark);
+}
+/* --- Hamburgare Menyn --- */
+nav .menu-mobile{
+    display: none;
+    color: var(--text-dark);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+/* --- Navbar --- */
+nav .menu-mobile{
+    display: none;
+    color: var(--text-dark);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+nav .menu-active{
+    left: 0 !important;
+}
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: var(--primary-background);
+    z-index: 99;
+    box-shadow: var(--shadow);
+}
+
+.nav-content{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul{
+    display: flex;
+    gap: 1rem;
+    transition: var(--transition);
+    list-style: none;
+}
+
+nav ul li a{
+    position: relative;
+    padding: 0.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: color var(--transition);
+}
+nav ul li a::before,
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--primary-color);
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+nav ul li a::before{
+    top: 0;
+}
+nav ul li a::after{
+    bottom: 0;
+}
+nav ul li a:hover{
+    color: var(--primary-color);
+}
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+    transform: scaleX(1);
+}
