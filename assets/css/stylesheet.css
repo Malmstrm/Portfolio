@@ -23,8 +23,6 @@
 
 
 
-/* --- Navbar --- */
-
 /* --- Nav-Logo --- */
 .nav-content .logo a{
     font-size: 1.5rem;
@@ -44,4 +42,71 @@ nav .menu-mobile{
     color: var(--text-dark);
     cursor: pointer;
     font-size: 1.5rem;
+}
+/* --- Navbar --- */
+nav .menu-mobile{
+    display: none;
+    color: var(--text-dark);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+nav .menu-active{
+    left: 0 !important;
+}
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: var(--primary-background);
+    z-index: 99;
+    box-shadow: var(--shadow);
+}
+
+.nav-content{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul{
+    display: flex;
+    gap: 1rem;
+    transition: var(--transition);
+    list-style: none;
+}
+
+nav ul li a{
+    position: relative;
+    padding: 0.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: color var(--transition);
+}
+nav ul li a::before,
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--primary-color);
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+nav ul li a::before{
+    top: 0;
+}
+nav ul li a::after{
+    bottom: 0;
+}
+nav ul li a:hover{
+    color: var(--primary-color);
+}
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+    transform: scaleX(1);
 }
