@@ -120,6 +120,103 @@ nav ul li a:hover::before,
 nav ul li a:hover::after{
     transform: scaleX(1);
 }
+/* --- Home-Section --- */
+.image {
+    display: grid;
+    place-items: center;
+}
+.image img{
+    width: min(20rem, 90%);
+    border: 1px solid var(--primary-color-dark);
+    border-radius: 1000px;
+    background-color: var(--primary-color);
+    box-shadow: var(--shadow);
+}
+.home-container{
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+}
+
+.home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.subtitle{
+    letter-spacing: 3px;
+}
+.title{
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+.title .span2{
+    color: var(--primary-color);
+}
+.descripton{
+    line-height: 2rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+.home-bts{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+.home-bts button{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 2rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    transition: var(--transition);
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    
+}
+.home-bts button:hover{
+    transform: scale(1.2)translateY(-10xp);
+    background-color: var(--primary-color-dark);
+    color: var(--text-dark);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.home-content .social{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.home-content .social a{
+    font-size: 1.5rem;
+    color: rgb(71, 97, 104);
+    border: 2px solid var(--primary-color);
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow: inset 0 0 10px rgba var(--primary-color), 0 0 10px var(--text-dark);
+    transition: 0.3s;
+}
+.home-content .social a:hover{
+    transform: scale(1.2)translateY(-10xp);
+    color: var(--primary-color-dark);
+    border-radius: 2px solid var(--primary-color-dark);
+}
 
 
 /* --- Footer --- */
@@ -204,6 +301,16 @@ footer .social a:hover{
     .nav-content ul li a {
         font-size: 1.5rem;
         left: 4rem;
+    }
+    /* Home */
+    .image{
+        grid-area: 1/1/2/2;
+    }
+    .home-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .home-bts button{
+        padding: 1rem 1.5rem;
     }
     /* Footer */
     footer .weather-api{
