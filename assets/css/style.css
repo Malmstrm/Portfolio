@@ -123,6 +123,63 @@ nav ul li a:hover::before,
 nav ul li a:hover::after{
     transform: scaleX(1);
 }
+/* --- Footer --- */
+
+footer {
+    background-color: var(--primary-background);
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 4rem;
+    box-shadow: var(--shadow);
+}
+footer .logo a{
+    color: var(--text-dark);
+}
+footer .logo span{
+    color: var(--primary-color);   
+}
+footer ul li{
+    display: inline-block;
+    padding: 0 20px;
+    
+}
+footer .social{
+    text-align: center;
+    padding: 0 25px;
+}
+footer .social a{
+    font-size: 1.5rem;
+    color: rgb(71, 97, 104);
+    border: 2px solid var(--primary-color);
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow: inset 0 0 10px rgba var(--primary-color), 0 0 10px var(--text-dark);
+    transition: 0.3s;
+}
+footer .social a:hover{
+    transform: scale(1.2)translateY(-10xp);
+    color: var(--primary-color-dark);
+    border-radius: 2px solid var(--primary-color-dark);
+}
+.list a {
+    color: var(--primary-color);
+}
+.list a:hover {
+    border-top: 1px solid var(--primary-color-dark);
+    border-bottom: 1px solid var(--primary-color-dark);
+    transition: 0.3s;
+}
 
 /* --- Media Queries --- */
 
