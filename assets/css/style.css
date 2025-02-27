@@ -19,54 +19,54 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
+body {
     font-family: var(--font);
     background-color: var(--extra-light);
 }
 
-section{
+section {
     width: 90%;
     margin: 2rem auto;
     background-color: var(--extra-light);
     padding: 1rem;
 }
-a{
+a {
     text-decoration: none;
 }
-ul{
+ul {
     list-style: none;
 }
 /* --- Nav-Logo --- */
-.nav-content .logo a{
+.nav-content .logo a {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-dark);
     transition: var(--transition);
 }
-.nav-content .logo span{
+.nav-content .logo span {
     color: var(--primary-color);
 }
-.nav-content .logo a:hover{
+.nav-content .logo a:hover {
     color: var(--primary-color-dark);
 }
 /* --- Hamburgare Menyn --- */
-nav .menu-mobile{
+nav .menu-mobile {
     display: none;
     color: var(--text-dark);
     cursor: pointer;
     font-size: 1.5rem;
 }
 /* --- Navbar --- */
-nav .menu-mobile{
+nav .menu-mobile {
     display: none;
     color: var(--text-dark);
     cursor: pointer;
     font-size: 1.5rem;
 }
-nav .menu-active{
+nav .menu-active {
     left: 0 !important;
 }
-nav{
+nav {
     position: fixed;
     width: 100%;
     top: 0;
@@ -75,7 +75,7 @@ nav{
     z-index: 99;
     box-shadow: var(--shadow);
 }
-.nav-content{
+.nav-content {
     max-width: var(--max-width);
     margin: auto;
     padding: 1.5rem 1rem;
@@ -83,13 +83,13 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
-nav ul{
+nav ul {
     display: flex;
     gap: 1rem;
     transition: var(--transition);
     list-style: none;
 }
-nav ul li a{
+nav ul li a {
     position: relative;
     padding: 0.5rem;
     font-weight: 600;
@@ -97,7 +97,7 @@ nav ul li a{
     transition: color var(--transition);
 }
 nav ul li a::before,
-nav ul li a::after{
+nav ul li a::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -110,14 +110,14 @@ nav ul li a::after{
 nav ul li a::before{
     top: 0;
 }
-nav ul li a::after{
+nav ul li a::after {
     bottom: 0;
 }
-nav ul li a:hover{
+nav ul li a:hover {
     color: var(--primary-color);
 }
 nav ul li a:hover::before,
-nav ul li a:hover::after{
+nav ul li a:hover::after {
     transform: scaleX(1);
 }
 /* --- Home-Section --- */
@@ -125,14 +125,14 @@ nav ul li a:hover::after{
     display: grid;
     place-items: center;
 }
-.image img{
+.image img {
     width: min(20rem, 90%);
     border: 1px solid var(--primary-color-dark);
     border-radius: 1000px;
     background-color: var(--primary-color);
     box-shadow: var(--shadow);
 }
-.home-container{
+.home-container {
     min-height: 100vh;
     max-width: var(--max-width);
     margin: auto;
@@ -143,36 +143,36 @@ nav ul li a:hover::after{
     justify-content: center;
 }
 
-.home-content{
+.home-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.subtitle{
+.subtitle {
     letter-spacing: 3px;
 }
-.title{
+.title {
     font-size: 2.5rem;
     font-weight: 600;
     line-height: 3rem;
     color: var(--text-dark);
     margin-bottom: 1.5rem;
 }
-.title .span2{
+.title .span2 {
     color: var(--primary-color);
 }
-.descripton{
+.descripton {
     line-height: 2rem;
     color: var(--text-light);
     margin-bottom: 2rem;
     margin-top: 2rem;
 }
-.home-bts{
+.home-bts {
     display: flex;
     gap: 2rem;
     justify-content: center;
 }
-.home-bts button{
+.home-bts button {
     border: none;
     outline: none;
     font-size: 1rem;
@@ -185,20 +185,19 @@ nav ul li a:hover::after{
     cursor: pointer;
     background-color: var(--primary-color);
     color: white;
-    
 }
-.home-bts button:hover{
+.home-bts button:hover {
     transform: scale(1.2)translateY(-10xp);
     background-color: var(--primary-color-dark);
     color: var(--text-dark);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
-.home-content .social{
+.home-content .social {
     margin-top: 20px;
     display: flex;
     justify-content: center;
 }
-.home-content .social a{
+.home-content .social a {
     font-size: 1.5rem;
     color: rgb(71, 97, 104);
     border: 2px solid var(--primary-color);
@@ -212,13 +211,12 @@ nav ul li a:hover::after{
     box-shadow: inset 0 0 10px rgba var(--primary-color), 0 0 10px var(--text-dark);
     transition: 0.3s;
 }
-.home-content .social a:hover{
+.home-content .social a:hover {
     transform: scale(1.2)translateY(-10xp);
     color: var(--primary-color-dark);
     border-radius: 2px solid var(--primary-color-dark);
 }
 /* --- About-Section --- */
-
 .image2 {
     float: left;
     width: 500px; /* Behåll samma bildbredd som tidigare */
@@ -232,9 +230,8 @@ nav ul li a:hover::after{
     background-color: var(--primary-color);
     margin-bottom: 20px;
     box-shadow: var(--shadow);
-  }
-
-.about-container{
+}
+.about-container {
     min-height: 100vh;
     max-width: var(--max-width);
     padding: 5rem;
@@ -247,7 +244,7 @@ nav ul li a:hover::after{
     text-align: left; /* Justerar texten vänster om det passar din design */
     margin-bottom: 1rem;
 }
-.about-container .head p{
+.about-container .head p {
     margin-bottom: 20px;
 }
 .about-content{
@@ -257,23 +254,21 @@ nav ul li a:hover::after{
     text-align: center;
     align-items: center;
 }
-.about-content .descripton{
+.about-content .descripton {
     margin: auto;
     margin-bottom: 50px;
 }
-.about-content p{
+.about-content p {
     margin-bottom: 10px;
 }
-
-.about-container h4{
+.about-container h4 {
     color: var(--primary-color-dark);
 }
-
 .about-container h3 {
     margin-bottom: 1rem;
     color: var(--primary-color);
 }
-.testimonial-container{
+.testimonial-container {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
@@ -295,7 +290,7 @@ nav ul li a:hover::after{
     border: 2px solid var(--primary-color-dark);
 }
 /* --- Skills-Section --- */
-.skills-container{
+.skills-container {
     min-height: 50vh;
     max-width: var(--max-width);
     margin: auto;
@@ -303,7 +298,7 @@ nav ul li a:hover::after{
     justify-content: center;
     padding: 5rem 2rem;
 }
-.skills-content{
+.skills-content {
     display: grid;
     grid-template-columns: repeat(3,3fr);
     justify-content: center;
@@ -311,7 +306,7 @@ nav ul li a:hover::after{
 }
 .skill-card {
     background: var(--primary-background);
-    height: 195px; /* Fast höjd för jämn storlek */
+    height: 195px;
     width: 325px;
     padding: 1.5rem;
     border-radius: 8px;
@@ -322,7 +317,7 @@ nav ul li a:hover::after{
     justify-content: space-between;
     transition: transform 0.3s ease-in-out;
 }
-.skill-card:hover{
+.skill-card:hover {
     transform: translateY(-10px);
     border: 2px solid var(--primary-color-dark);
 }
@@ -330,12 +325,126 @@ nav ul li a:hover::after{
     font-size: 3rem;
     color: var(--primary-color);
 }
-.skill-card h3{
+.skill-card h3 {
     font-size: 1.5rem;
     color:  var(--text-dark);
 }
 .skill-card p {
     color: var(--text-light);
+}
+/* --- Project-Section --- */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+}
+.mySwiper {
+    width: 100%;
+}
+.container {
+    overflow: hidden;
+}
+.swiper-wrapper {
+    padding: 0 2rem 0rem 2rem;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    overflow: hidden;
+}
+.swiper-slide .box {
+    height: 700px;
+    width: 500px;
+    object-fit: cover;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid rgb(188, 188, 188);
+}
+.box .img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+.box .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid rgb(188, 188, 188);
+}
+.box .info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 320px); 
+    
+}
+.box .info h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+.box .info p {
+    font-size: 1rem;
+}
+.box .info .btn {
+    margin-top: auto;
+}
+.box .info .btn button {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 2rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    transition: var(--transition);
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.box .info .btn button:hover {
+    transform: scale(1.2)translateY(-10xp);
+    background-color: white;
+    color: var(--text-dark);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--primary-color); /* Färg på pilar */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-button-prev {
+    position: absolute;
+    left: -10px;
+}
+
+.swiper-button-next {
+    right: -10px;
+    position: absolute;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 /* --- Footer --- */
 footer {
@@ -351,22 +460,22 @@ footer {
     gap: 4rem;
     box-shadow: var(--shadow);
 }
-footer .logo a{
+footer .logo a {
     color: var(--text-dark);
 }
-footer .logo span{
+footer .logo span {
     color: var(--primary-color);   
 }
-footer ul li{
+footer ul li {
     display: inline-block;
     padding: 0 20px;
     
 }
-footer .social{
+footer .social {
     text-align: center;
     padding: 0 25px;
 }
-footer .social a{
+footer .social a {
     font-size: 1.5rem;
     color: rgb(71, 97, 104);
     border: 2px solid var(--primary-color);
@@ -427,17 +536,17 @@ footer .social a:hover {
         left: 4rem;
     }
     /* Home */
-    .image{
+    .image {
         grid-area: 1/1/2/2;
     }
-    .home-container{
+    .home-container {
         grid-template-columns: repeat(1,1fr);
     }
-    .home-bts button{
+    .home-bts button {
         padding: 1rem 1.5rem;
     }
     /* About */
-    .image{
+    .image {
         grid-area: 1/1/2/2;
     }
     .image2 {
@@ -449,7 +558,7 @@ footer .social a:hover {
     .head-text {
         text-align: left;    /* Återställ textjusteringen om du vill */
     }
-    .about-container{
+    .about-container {
         grid-template-columns: repeat(1,1fr);
         gap: 0;
         padding: 0;
@@ -457,22 +566,21 @@ footer .social a:hover {
     .testimonial-container {
         grid-template-columns: repeat(1, 1fr);
     }
-    .image2 img{
+    .image2 img {
         width: 200px;
     }
     /* Skills */
-    .skills-content{
+    .skills-content {
         grid-template-columns: repeat(1,1fr);
     }
     /* Footer */
-    footer .weather-api{
+    footer .weather-api {
         display: none;
     }
-    footer .social{
+    footer .social {
         padding: 0;
     }
-
-    footer .social a{
+    footer .social a {
         margin: 0;
     }
 }
