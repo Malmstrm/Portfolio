@@ -217,7 +217,82 @@ nav ul li a:hover::after{
     color: var(--primary-color-dark);
     border-radius: 2px solid var(--primary-color-dark);
 }
+/* --- About-Section --- */
 
+.image2 {
+    float: left;
+    width: 500px; /* Behåll samma bildbredd som tidigare */
+    margin-right: 1rem; /* Mellanrum mellan bilden och texten */
+    display: block; /* Tar bort grid-inställningen */
+}
+.image2 img {
+    width: 100%;
+    border: 1px solid var(--primary-color-dark);
+    border-radius: 33%;
+    background-color: var(--primary-color);
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+
+.about-container{
+    min-height: 100vh;
+    max-width: var(--max-width);
+    padding: 5rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+.about-container .head {
+    overflow: hidden; /* Rensar floaten */
+    text-align: left; /* Justerar texten vänster om det passar din design */
+    margin-bottom: 1rem;
+}
+.about-container .head p{
+    margin-bottom: 20px;
+}
+.about-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center;
+    align-items: center;
+}
+.about-content .descripton{
+    margin: auto;
+}
+.about-content p{
+    margin-bottom: 10px;
+}
+
+.about-container h4{
+    color: var(--primary-color-dark);
+}
+
+.about-container h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+.testimonial-container{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+  
+.testimonials-card {
+    background: var(--primary-background);
+    min-height: 155px;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.testimonials-card:hover {
+    transform: translateY(-10px);
+    border: 2px solid var(--primary-color-dark);
+}
 
 /* --- Footer --- */
 footer {
@@ -262,7 +337,7 @@ footer .social a{
     box-shadow: inset 0 0 10px rgba var(--primary-color), 0 0 10px var(--text-dark);
     transition: 0.3s;
 }
-footer .social a:hover{
+footer .social a:hover {
     transform: scale(1.2)translateY(-10xp);
     color: var(--primary-color-dark);
     border-radius: 2px solid var(--primary-color-dark);
@@ -279,15 +354,18 @@ footer .social a:hover{
 /* --- Media Queries --- */
 
 @media (min-width: 769px) and (max-width: 1024px) {
-
+    /* About */
+    .testimonial-container {
+        grid-template-columns: repeat(2, 2fr);
+    }
 }
 @media (min-width: 360px) and (max-width: 860px){
 
     /* NAV */
-    nav .menu-mobile{
+    nav .menu-mobile {
         display: block;
     }
-    .nav-content ul{
+    .nav-content ul {
         position: absolute;
         width: 100%;
         height: calc(100vh - 80px);
@@ -311,6 +389,31 @@ footer .social a:hover{
     }
     .home-bts button{
         padding: 1rem 1.5rem;
+    }
+    /* About */
+    .image{
+        grid-area: 1/1/2/2;
+    }
+    .image2 {
+        float: none;         /* Ta bort floaten */
+        width: 100%;         /* Bilden tar hela bredden */
+        margin: 0 auto 1rem auto; /* Centrerar bilden och ger lite marginal nedanför */
+        text-align: center;
+    }
+    .head-text {
+        text-align: left;    /* Återställ textjusteringen om du vill */
+    }
+    .about-container{
+        grid-template-columns: repeat(1,1fr);
+        gap: 0;
+        padding: 0;
+    }
+    .testimonial-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .image2 img{
+        width: 200px;
     }
     /* Footer */
     footer .weather-api{
