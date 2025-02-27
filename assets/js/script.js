@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
     });
+    
 
     const cityInput = document.getElementById("city-input");
     const searchBtn = document.getElementById("search-btn");
